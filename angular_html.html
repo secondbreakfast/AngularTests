@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Angular Tutorial</title>
+<!--Angular library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script src="myController.js"></script>
+</head>
+
+<body>
+<div ng-app="myApp">
+	<div ng-controller="myController">
+
+		<input ng-model="todo">
+		<!-- <div>{{ todo }}</div> -->
+		
+		<!-- Made a click button which will activate the controller -->
+		<button ng-click="addToList();">Add to list</button>	
+		
+		<div>My Todo List</div>
+
+		<div ng-repeat="item in list">
+			{{ item }}
+		</div>
+		</div>
+
+</body>
+</html>

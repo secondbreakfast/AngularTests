@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script src="app.js"></script>
+		<script src="movieController.js"></script>
+	</head>
+	<body>
+		<div ng-app="movieApp">
+			<div ng-controller="Theaters">
+<!-- 			    Select a country to see movie listings: <select id="theaterList" ng-model="selectCountry" name="propertyAddress_state" class="span1 dm_state" required ng-options="obj.lookupCode as obj.description for obj in country_list | orderBy:'lookupCode':false"></select>  --> 
+				<select id="theaterList" class='dropdown' ng-model="selectCountry">
+				<option disabled="disabled" selected="selected">Select a value</option>
+				<option id = "drop1" ng-selected="selected" value="US">United States</option>
+				<option id = "drop2" ng-selected="selected" value="UK">United Kingdom</option>
+				<option id = "drop3" ng-selected="selected" value="FR">France</option>
+				<option id = "drop4" ng-selected="selected" value="JP">Japan</option>
+				<option id = "drop5" ng-selected="selected" value="KR">South Korea</option>
+<!-- 				</select> -->
+
+				<button ng-click="theater();">Search Theaters</button>
+<!-- 				<div> {{bestMovie}} </div> -->
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- Homeowork: go to Rotten Tomatoes and pull movies that are in theaters by country. Push the results to a website. Bonus: Have wishlist to have it show up in a separate list. -->
