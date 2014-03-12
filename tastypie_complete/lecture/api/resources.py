@@ -21,7 +21,8 @@ class BareStudentProjectResource(ModelResource):
 
 class StudentResource(ModelResource):
     klass = ToOneField(BareClassResource, 'klass', full=True)
-    projects = ToManyField(BareStudentProjectResource, 'projects', full=True)
+    # Allows null values below.
+    projects = ToManyField(BareStudentProjectResource, 'projects', full=True, null=True)
 
     class Meta:
         queryset = Student.objects.all()

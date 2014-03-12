@@ -1,0 +1,15 @@
+<h1>Add New Project</h1>
+
+<form ng-submit="submitForm()" >
+    <div>
+        Project Name: <input type="text" ng-model="project.name">
+    </div>
+
+    <div>
+        <!-- Gets options from add_student.js. No need to add <option> tags, which set a label and value. The fields below are part of the JSON object.
+            The first item gets added into the value, the second value gets into the text field.
+        -->
+        Student: <select ng-model="project.student" ng-options="project.resource_uri as (project.first_name + ' ' + project.last_name) for project in projects"></select>
+    </div>
+    <input type="submit" value="Add Project">
+</form>

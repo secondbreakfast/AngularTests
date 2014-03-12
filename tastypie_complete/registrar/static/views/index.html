@@ -1,0 +1,13 @@
+<h1>Student List</h1>
+<br>
+<!-- Need to add hash so that everything can stay on one page. Need to create the path in app.js. -->
+<a href="#/add/student/">Add new student</a><br>
+<!-- Run an angular loop in the empty ul space below. Goes through and prints each item. --!>
+<ul ng-repeat="student in students">
+   <li><a href="#/{{ student.id }}/add/project/">{{ student.first_name }} {{ student.last_name }}</a></li>
+   <div ng-show="student.projects"<i>Projects</i></div>
+        <ul ng-repeat="project in student.projects">
+        <li>{{ project.name }}</li>
+        </ul>
+</ul>
+
